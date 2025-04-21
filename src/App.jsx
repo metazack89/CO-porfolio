@@ -1,3 +1,4 @@
+import FloatingButton from "./components/FloatingButton";
 import MouseTracker from "./components/MouseTracker";
 import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
 import ContactMeMain from "./components/contactMeSection/ContactMeMain";
@@ -13,9 +14,10 @@ import SubHeroMain from "./components/subHeroSection/SubHeroMain";
 
 function App() {
   return (
-    <main className="font-body text-white relative overflow-hidden">
+    <main className="font-body text-white relative overflow-x-hidden">
       {/* Gradiente interactivo que sigue al cursor */}
       <MouseTracker />
+      <FloatingButton />
 
       {/* Secciones del portafolio */}
       <NavbarMain />
