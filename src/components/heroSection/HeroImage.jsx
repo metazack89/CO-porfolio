@@ -5,7 +5,7 @@ const HeroImage = () => {
     <div className="relative self-end h-full w-full items-center justify-center">
       <div className=" h-full w-full">
         <img
-          src="../../public/images/me.png"
+          src="/me.png"
           alt="Cristian Ortiz"
           className="w-auto h-auto md:max-w-[380px] sm:max-w-[380px] absolute bottom-[0px] z-10 left-[80%] -translate-x-[80%] hover:scale-105 transition-all duration-500 ease-in-out rounded-full shadow-lg shadow-cyan/50"
         />

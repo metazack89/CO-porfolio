@@ -1,3 +1,4 @@
+import MouseTracker from "./components/MouseTracker";
 import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
 import ContactMeMain from "./components/contactMeSection/ContactMeMain";
 import ExperienceMain from "./components/experienceSection/ExperienceMain";
@@ -13,6 +14,10 @@ import SubHeroMain from "./components/subHeroSection/SubHeroMain";
 function App() {
   return (
     <main className="font-body text-white relative overflow-hidden">
+      {/* Gradiente interactivo que sigue al cursor */}
+      <MouseTracker />
+
+      {/* Secciones del portafolio */}
       <NavbarMain />
       <HeroMain />
       <HeroGradient />

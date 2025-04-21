@@ -13,7 +13,7 @@ const HeroPic = () => {
     >
       <div className="p-[4px] rounded-full bg-gradient-to-br from-cyan to-darkOrange inline-block transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange/80">
         <img
-          src="../../public/images/HexaPic.png"
+          src="/HexaPic.png"
           alt="Cristian Ortiz"
           className="max-h-[380px] w-auto border-4 border-transparent rounded-full shadow-lg transition-all duration-300 ease-in-out hover:border-lightOrange"
         />

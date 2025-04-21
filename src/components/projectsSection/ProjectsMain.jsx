@@ -8,14 +8,14 @@ const projects = [
     name: "Fortune Cookie",
     year: "March2024",
     align: "right",
-    image: "../../public/images/website-img-1.jpg",
+    image: "/website-img-1.jpg",
     link: "https://galleta-jenderlucris.netlify.app",
   },
   {
     name: "Develop School",
     year: "March2024",
     align: "left",
-    image: "../../public/images/website-img-2.webp",
+    image: "/website-img-2.webp",
     link: "https://developschool.netlify.app",
   },
 
@@ -23,14 +23,14 @@ const projects = [
     name: "Mega Poke App",
     year: "April2024",
     align: "right",
-    image: "../../public/images/website-img-3.jpg",
+    image: "/website-img-3.jpg",
     link: "https://megapokeapp.netlify.app",
   },
   {
     name: "PWA Rick and Morty",
     year: "March2024",
     align: "left",
-    image: "../../public/images/website-img-4.jpg",
+    image: "/website-img-4.jpg",
     link: "https://appriymo.netlify.app",
   },
 ];
