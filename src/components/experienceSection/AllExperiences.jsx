@@ -18,12 +18,24 @@ const experiences = [
   },
   {
     job: "Develop APIs",
-    company: "independent",
+    company: "Freelancer",
     date: "2024 - Present",
     responsibilities: [
-      "Explaining and facilitating web development concepts.",
-      "Help students with their assignments and grade them weekly.",
-      "Provide support for students through their learning journey.",
+      "💡 Explain and facilitate web development concepts using modern tools",
+      "📝 Assist students with assignments and evaluate weekly progress",
+      "🛠️ Guide projects using Next.js, Prisma, and DBeaver",
+      "🤝 Provide ongoing mentorship and technical support",
+    ],
+  },
+  {
+    job: "Experience Specialist",
+    company: "Motorola Solutions",
+    date: "2022 - 2023",
+    responsibilities: [
+      "📱 Mobile device expert support",
+      "🎯 Enhanced in-store customer experience",
+      "🚀 Assisted with product launches",
+      "👥 Trained and guided new staff",
     ],
   },
 ];
