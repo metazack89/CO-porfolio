@@ -8,7 +8,7 @@ const experiences = [
   {
     job: "Front-End Developer",
     company: "Desarrollo Software y Hardware ltda ",
-    date: "2024 - Present",
+    date: "2024 - 2025",
     responsibilities: [
       "🚀 User Interface Designs",
       "⚡ Site Optimization & Performance",
