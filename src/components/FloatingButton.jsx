@@ -12,7 +12,7 @@ const FloatingButton = () => {
     >
       <FiDownload className="text-lg text-white hover:text-lightOrange transition-all duration-300" />
       <span className="hidden sm:inline text-white hover:text-lightOrange transition-all duration-300">
-        Download
+        CV
       </span>
     </a>
   );
