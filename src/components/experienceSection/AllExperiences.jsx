@@ -24,7 +24,6 @@ const experiences = [
       "💡 Explain and facilitate web development concepts using modern tools",
       "📝 Assist students with assignments and evaluate weekly progress",
       "🛠️ Guide projects using Next.js, Prisma, and DBeaver",
-      "🤝 Provide ongoing mentorship and technical support",
     ],
   },
   {
