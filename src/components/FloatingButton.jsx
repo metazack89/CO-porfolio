@@ -4,7 +4,7 @@ import { FiDownload } from "react-icons/fi";
 const FloatingButton = () => {
   return (
     <a
-      href="/cven.pdf"
+      href="/cv-English.pdf"
       download
       target="_blank"
       rel="noopener noreferrer"
