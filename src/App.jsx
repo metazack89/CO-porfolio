@@ -18,7 +18,7 @@ function App() {
       {/* Gradiente interactivo que sigue al cursor */}
       <MouseTracker />
       <FloatingButton />
-
+      {/* Botón flotante para descargar el cv */}
       {/* Secciones del portafolio */}
       <NavbarMain />
       <HeroMain />

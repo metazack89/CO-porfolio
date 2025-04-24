@@ -27,7 +27,7 @@ const HeroText = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}
-        className="text-lg mt-4"
+        className="text-lg mt-4   uppercase text-lightGrey"
       >
         A Passionate Web Developer <br /> with 1 year of experience.
       </motion.p>

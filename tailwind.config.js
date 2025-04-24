@@ -52,5 +52,5 @@ export default {
       special: ['"Nunito"'],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

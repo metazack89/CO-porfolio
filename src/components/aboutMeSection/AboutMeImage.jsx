@@ -3,7 +3,7 @@ const AboutMeImage = () => {
     <div className="h-[500px] w-[300px] relative">
       <div className="h-[500px] w-[300px] rounded-[100px] absolute overflow-hidden">
         <img
-          src="/about-me.jpg"
+          src="/about-me.png"
           alt="About Me Image"
           className="h-full w-auto object-cover bourderder-2 border-white rounded-[80px] shadow-lg hover:border-cyan-500 transition duration-300 ease-in-out transform hover:scale-105"
         />
