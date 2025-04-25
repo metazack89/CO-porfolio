@@ -1,21 +1,20 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
+
+  const handleName = (e) => setName(e.target.value);
+  const handleEmail = (e) => setEmail(e.target.value);
+  const handleMessage = (e) => setMessage(e.target.value);
+
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -27,7 +26,7 @@ const ContactForm = () => {
           setEmail("");
           setName("");
           setMessage("");
-          setSuccess("Message Sent Succesfully");
+          setSuccess(t("contact.leftSection.successMessage")); // Corregido para traducción
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -36,35 +35,33 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
-      <p className="text-cyan">{success}</p>
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4">
+      <p className="text-cyan text-center">{success}</p>
+      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
         <input
           type="text"
           name="from_name"
-          placeholder="Your Name"
+          placeholder={t("contact.leftSection.namePlaceholder")} // Traducido
           required
-          className="h-12 rounded-lg bg-lightBrown px-2"
+          className="h-12 rounded-lg bg-lightBrown px-4"
           value={name}
           onChange={handleName}
         />
         <input
           type="email"
           name="from_email"
-          placeholder="Your Email"
+          placeholder={t("contact.leftSection.emailPlaceholder")} // Traducido
           required
-          className="h-12 rounded-lg bg-lightBrown px-2"
+          className="h-12 rounded-lg bg-lightBrown px-4"
           value={email}
           onChange={handleEmail}
         />
         <textarea
-          type="text"
           name="message"
-          rows="9"
-          cols="50"
-          placeholder="Message"
+          rows="6"
+          placeholder={t("contact.leftSection.messagePlaceholder")} // Traducido
           required
-          className=" rounded-lg bg-lightBrown p-2"
+          className="rounded-lg bg-lightBrown p-4"
           value={message}
           onChange={handleMessage}
         />
@@ -72,7 +69,7 @@ const ContactForm = () => {
           type="submit"
           className="w-full rounded-lg border border-cyan text-white h-12 font-bold text-xl hover:bg-darkCyan bg-cyan transition-all duration-500"
         >
-          Send
+          {t("contact.leftSection.sendButton")} {/* Traducido */}
         </button>
       </form>
     </div>

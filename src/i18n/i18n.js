@@ -8,9 +8,11 @@ i18n.use(initReactI18next).init({
     en: { translation: en },
     es: { translation: es },
   },
-  lng: "en", // idioma por defecto
+  lng: "en", // o "es", dependiendo de tu idioma por defecto
   fallbackLng: "en",
-  interpolation: { escapeValue: false },
+  interpolation: {
+    escapeValue: false,
+  },
 });
 
 export default i18n;

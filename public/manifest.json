@@ -2,14 +2,19 @@
   "name": "Cristian Ortiz",
   "short_name": "Portfolio",
   "description": "I am a Developer with knowledge in JavaScript, CSS, and React. I enjoy experimenting and bringing simple things to life, as well as evolving more advanced processes.",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#000",
   "theme_color": "#000",
   "icons": [
     {
-      "src": "./favicon.png",
-      "sizes": "50x50",
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

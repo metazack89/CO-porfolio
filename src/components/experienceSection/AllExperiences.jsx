@@ -3,43 +3,12 @@ import SingleExperience from "./SingleExperience";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
-
-const experiences = [
-  {
-    job: "Front-End Developer",
-    company: "Desarrollo Software y Hardware ltda ",
-    date: "2024 - 2025",
-    responsibilities: [
-      "🚀 User Interface Designs",
-      "⚡ Site Optimization & Performance",
-      "💻 Frontend & Occasionally Backend ",
-      "💡 Generating Innovative Ideas ",
-    ],
-  },
-  {
-    job: "Develop APIs",
-    company: "Freelancer",
-    date: "2024 - Present",
-    responsibilities: [
-      "💡 Explain and facilitate web development concepts using modern tools",
-      "📝 Assist students with assignments and evaluate weekly progress",
-      "🛠️ Guide projects using Next.js, Prisma, and DBeaver",
-    ],
-  },
-  {
-    job: "Experience Specialist",
-    company: "Motorola Solutions",
-    date: "2022 - 2023",
-    responsibilities: [
-      "📱 Mobile device expert support",
-      "🎯 Enhanced in-store customer experience",
-      "🚀 Assisted with product launches",
-      "👥 Trained and guided new staff",
-    ],
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const AllExperiences = () => {
+  const { t } = useTranslation();
+  const experiences = t("experience.list", { returnObjects: true });
+
   return (
     <div className="flex md:flex-row sm:flex-col items-center justify-between">
       {experiences.map((experience, index) => (

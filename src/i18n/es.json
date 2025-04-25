@@ -1,9 +1,101 @@
 {
-  "navbar": {
-    "about": "Sobre mí",
-    "skills": "Habilidades",
-    "experience": "Experiencia",
-    "projects": "Proyectos",
-    "contact": "Contacto"
-  }
+  "contactMe": "Contáctame",
+  "hero": {
+    "subtitle": "Desarrollador Web Front-End",
+    "title": "Cristian Ortiz",
+    "description": "Un desarrollador web apasionado con 1 año de experiencia."
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy Cristian, un desarrollador web apasionado por construir aplicaciones modernas, dinámicas y centradas en el usuario. Tengo una sólida formación en ciencias de la computación y experiencia práctica en desarrollo frontend.\nMe especializo en React, Next.js, HTML, CSS, JavaScript, Tailwind CSS y TypeScript.\nDisfruto dando vida a las ideas a través de interfaces limpias, eficientes y responsivas.\nSiempre estoy en busca de aprender más y aplicar las mejores prácticas que faciliten el desarrollo tanto para los usuarios como para otros desarrolladores.",
+    "button": "Mis Proyectos"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "list": [
+      {
+        "job": "Desarrollador Front-End",
+        "company": "Desarrollo Software y Hardware ltda",
+        "date": "2024 - 2025",
+        "responsibilities": [
+          "🚀 Diseños de interfaz de usuario",
+          "⚡ Optimización y rendimiento del sitio",
+          "💻 Frontend y ocasionalmente Backend",
+          "💡 Generación de ideas innovadoras"
+        ]
+      },
+      {
+        "job": "Desarrollador de APIs",
+        "company": "Freelancer",
+        "date": "2024 - Actualidad",
+        "responsibilities": [
+          "💡 Explicar y facilitar conceptos de desarrollo web con herramientas modernas",
+          "📝 Apoyar a estudiantes con tareas y evaluar su progreso semanal",
+          "🛠️ Guiar proyectos con Next.js, Prisma y DBeaver"
+        ]
+      },
+      {
+        "job": "Especialista de Experiencia",
+        "company": "Motorola Solutions",
+        "date": "2022 - 2023",
+        "responsibilities": [
+          "📱 Soporte experto en dispositivos móviles",
+          "🎯 Mejora de la experiencia del cliente en tienda",
+          "👥 Capacitación y orientación al nuevo personal"
+        ]
+      }
+    ]
+  },
+  "experienceTopLeft": {
+    "since": "Desde 2024",
+    "year": "Año",
+    "websites": "Sitios Web",
+    "description": "Con 1 año de experiencia construyendo aplicaciones web dinámicas y fáciles de usar."
+  },
+  "experienceTopRight": {
+    "description": "Me especializo en <bold>React y JavaScript moderno</bold>, aprovechando las mejores prácticas para crear soluciones escalables y mantenibles..."
+  },
+  "footer": {
+    "line": "Línea del pie de página",
+    "name": "Cristian Ortiz",
+    "rights": "© 2025 Cristian Ortiz | Todos los derechos reservados.",
+    "links": {
+      "about": "Sobre mí",
+      "skills": "Habilidades",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "leftSection": {
+      "title": "Formulario de Contacto",
+      "namePlaceholder": "Introduce tu nombre",
+      "emailPlaceholder": "Introduce tu correo",
+      "messagePlaceholder": "Introduce tu mensaje",
+      "sendButton": "Enviar",
+      "successMessage": "¡Tu mensaje ha sido enviado con éxito!",
+      "getInTouchTitle": "Ponte en contacto",
+      "getInTouchText1": "¡No pierdas la oportunidad de colaborar! Si tienes una idea brillante o deseas unirte a un proyecto emocionante, ¡estoy aquí para hacerlo realidad!",
+      "getInTouchText2": "¡Estás a solo unos clics de hacerlo!"
+    },
+    "rightSection": {
+      "title": "Información de Contacto"
+    }
+  },
+
+  "subHero": {
+    "fastLearner": "Aprendiz Rápido",
+    "teamWork": "Trabajo en Equipo"
+  },
+  "projectsSection": {
+    "title": "Proyectos",
+    "description": "He trabajado en varios proyectos de desarrollo web, tanto colaborativos como personales, como parte de mis estudios. Mi enfoque ha sido crear interfaces centradas en el usuario, mejorar la experiencia y optimizar el rendimiento en diferentes plataformas."
+  },
+  "skillsSection": {
+    "title": "Mis Habilidades",
+    "description": "Las utilizo aplicando las mejores prácticas para entregar resultados de alta calidad. He empleado todas estas habilidades para desarrollar los proyectos de mi portafolio."
+  },
+  "download_cv": "CV"
 }

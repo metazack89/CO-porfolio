@@ -1,9 +1,100 @@
 {
-  "navbar": {
-    "about": "About Me",
-    "skills": "My Skills",
-    "experience": "Experience",
-    "projects": "Projects",
-    "contact": "Contact Me"
-  }
+  "contactMe": "Contact Me",
+  "hero": {
+    "subtitle": "Front-End Web Developer",
+    "title": "Cristian Ortiz",
+    "description": "A Passionate Web Developer with 1 year of experience."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm Cristian, a web developer passionate about building modern, dynamic, and user-focused applications. I have a solid background in computer science and hands-on experience in frontend development. I specialize in React, Next.js, HTML, CSS, JavaScript, Tailwind CSS, and TypeScript. I enjoy bringing ideas to life through clean, efficient, and responsive interfaces. I'm always looking to learn more and apply best practices that make development smoother for both users and fellow developers.",
+    "button": "My Projects"
+  },
+  "experience": {
+    "title": "Experience",
+    "list": [
+      {
+        "job": "Front-End Developer",
+        "company": "Desarrollo Software y Hardware ltda",
+        "date": "2024 - 2025",
+        "responsibilities": [
+          "🚀 User Interface Designs",
+          "⚡ Site Optimization & Performance",
+          "💻 Frontend & Occasionally Backend",
+          "💡 Generating Innovative Ideas"
+        ]
+      },
+      {
+        "job": "Develop APIs",
+        "company": "Freelancer",
+        "date": "2024 - Present",
+        "responsibilities": [
+          "💡 Explain and facilitate web development concepts using modern tools",
+          "📝 Assist students with assignments and evaluate weekly progress",
+          "🛠️ Guide projects using Next.js, Prisma, and DBeaver"
+        ]
+      },
+      {
+        "job": "Experience Specialist",
+        "company": "Motorola Solutions",
+        "date": "2022 - 2023",
+        "responsibilities": [
+          "📱 Mobile device expert support",
+          "🎯 Enhanced in-store customer experience",
+          "👥 Trained and guided new staff"
+        ]
+      }
+    ]
+  },
+  "experienceTopLeft": {
+    "since": "Since 2024",
+    "year": "Year",
+    "websites": "Websites",
+    "description": "With 1 year of experience building dynamic and user-friendly web applications."
+  },
+  "experienceTopRight": {
+    "description": "I specialize in <bold>React and modern JavaScript</bold>, leveraging best practices to create scalable and maintainable solutions. My experience spans working on diverse projects, from small business websites to <bold>complex front-end systems</bold>. Always aiming for clean, efficient code because great experiences start with a solid foundation. Crafting exceptional user journeys where design meets functionality flawlessly."
+  },
+  "footer": {
+    "line": "FooterLine",
+    "name": "Cristian Ortiz",
+    "rights": "© 2025 Cristian Ortiz | All Rights Reserved.",
+    "links": {
+      "about": "About Me",
+      "skills": "Skills",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "leftSection": {
+      "title": "Contact Form",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "Enter your email",
+      "messagePlaceholder": "Enter your message",
+      "sendButton": "Send",
+      "successMessage": "Your message has been sent successfully!",
+      "getInTouchTitle": "Get In Touch",
+      "getInTouchText1": "Don't miss the chance to collaborate! If you have a brilliant idea or want to join an exciting project, I'm here to make it happen!",
+      "getInTouchText2": "You are just a few clicks away!"
+    },
+    "rightSection": {
+      "title": "Contact Information"
+    }
+  },
+  "subHero": {
+    "fastLearner": "Fast Learner",
+    "teamWork": "Team Work"
+  },
+  "projectsSection": {
+    "title": "Projects",
+    "description": "I’ve worked on a few web development projects, both collaborative and personal, as part of my studies. My focus has been on creating user-centered interfaces, improving user experience, and optimizing performance across different platforms."
+  },
+  "skillsSection": {
+    "title": "My Skills",
+    "description": "I utilize them by applying best practices to deliver high-quality results. I have employed all these skills to develop my portfolio projects."
+  },
+  "download_cv": "CV"
 }
