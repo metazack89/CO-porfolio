@@ -7,7 +7,7 @@ import { fadeIn } from "../../framerMotion/variants";
 const projects = [
   {
     name: "Fortune Cookie",
-    year: "March2024",
+    year: "March2025",
     align: "right",
     image: "/website-img-1.jpg",
     link: "https://galleta-jenderlucris.netlify.app/",
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     name: "Develop School",
-    year: "March2024",
+    year: "March2025",
     align: "left",
     image: "/website-img-2.webp",
     link: "https://developschool.netlify.app/",
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: "Mega Poke App",
-    year: "April2024",
+    year: "April2025",
     align: "right",
     image: "/website-img-3.jpg",
     link: "https://megapokeapp.netlify.app/#/",
@@ -31,11 +31,19 @@ const projects = [
   },
   {
     name: "PWA Rick and Morty",
-    year: "March2024",
+    year: "March2025",
     align: "left",
     image: "/website-img-4.jpg",
     link: "https://appriymo.netlify.app/",
     githubLink: "https://github.com/metazack89/RickandMorty",
+  },
+  {
+    name: "AirBnB",
+    year: "January2025",
+    align: "left",
+    image: "/airbnb.jpg",
+    link: "https://coairbn.netlify.app/",
+    githubLink: "https://github.com/metazack89/airbnb",
   },
 ];
 
