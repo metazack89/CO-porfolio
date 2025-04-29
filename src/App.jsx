@@ -11,6 +11,7 @@ import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
 import SubHeroMain from "./components/subHeroSection/SubHeroMain";
+import ThreeBackground from "./components/three/ThreeBackground";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <FloatingButton />
       {/* Botón flotante para descargar el cv */}
       {/* Secciones del portafolio */}
+      <ThreeBackground />
+      {/* Fondo 3D */}
       <NavbarMain />
       <HeroMain />
       <HeroGradient />
