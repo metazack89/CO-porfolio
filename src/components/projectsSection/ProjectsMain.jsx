@@ -45,6 +45,14 @@ const projects = [
     link: "https://coairbn.netlify.app/",
     githubLink: "https://github.com/metazack89/airbnb",
   },
+  {
+    name: "Chrisecom",
+    year: "April2025",
+    align: "left",
+    image: "/chriscom.jpg",
+    link: "https://chrise-com.netlify.app/",
+    githubLink: "https://github.com/metazack89/ecomm",
+  },
 ];
 
 const ProjectsMain = () => {
