@@ -10,7 +10,7 @@ const projects = [
     year: "March2025",
     align: "right",
     image: "/website-img-1.jpg",
-    link: "https://galleta-jenderlucris.netlify.app/",
+    link: "https://gallet.netlify.app/",
     githubLink: "https://github.com/metazack89/Galleta-jendercris",
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     year: "March2025",
     align: "left",
     image: "/website-img-2.webp",
-    link: "https://developschool.netlify.app/",
+    link: "https://developschools.netlify.app/",
     githubLink: "https://github.com/metazack89/CRUD2.0",
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     year: "April2025",
     align: "right",
     image: "/website-img-3.jpg",
-    link: "https://megapokeapp.netlify.app/#/",
+    link: "https://megaa.netlify.app/",
     githubLink: "https://github.com/metazack89/POKEAPP",
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     year: "March2025",
     align: "left",
     image: "/website-img-4.jpg",
-    link: "https://appriymo.netlify.app/",
+    link: "https://rymap.netlify.app/",
     githubLink: "https://github.com/metazack89/RickandMorty",
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     year: "January2025",
     align: "left",
     image: "/airbnb.jpg",
-    link: "https://coairbn.netlify.app/",
+    link: "https://cobnb.netlify.app/",
     githubLink: "https://github.com/metazack89/airbnb",
   },
   {
@@ -50,7 +50,7 @@ const projects = [
     year: "April2025",
     align: "left",
     image: "/chriscom.jpg",
-    link: "https://chrise-com.netlify.app/",
+    link: "https://acommer.netlify.app/",
     githubLink: "https://github.com/metazack89/ecomm",
   },
 ];
