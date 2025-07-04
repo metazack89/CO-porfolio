@@ -146,3 +146,4 @@ const ProjectsMain = () => {
     </div>
   );
 };
+export default ProjectsMain;
