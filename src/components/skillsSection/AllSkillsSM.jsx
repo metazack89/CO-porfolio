@@ -4,9 +4,14 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
+import { IoLogoDocker } from "react-icons/io5";
 import { SiNextdotjs } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaNodeJs } from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
+import { SiDbeaver } from "react-icons/si";
+import { TbBrandPrisma } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
@@ -32,8 +37,8 @@ const skills = [
     icon: FaReact,
   },
   {
-    skill: "Redux",
-    icon: SiRedux,
+    skill: "Docker",
+    icon: IoLogoDocker,
   },
   {
     skill: "Git",
@@ -47,6 +52,26 @@ const skills = [
   {
     skill: "TailwindCSS",
     icon: RiTailwindCssFill,
+  },
+  {
+    skill: "PostgreSQL",
+    icon: BiLogoPostgresql,
+  },
+  {
+    skill: "NodeJS",
+    icon: FaNodeJs,
+  },
+  {
+    skill: "Postman",
+    icon: SiPostman,
+  },
+  {
+    skill: "DBeaver",
+    icon: SiDbeaver,
+  },
+  {
+    skill: "Prisma",
+    icon: TbBrandPrisma,
   },
 ];
 

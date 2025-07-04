@@ -1,7 +1,7 @@
 import ProjectsText from "./ProjectsText";
 import SingleProject from "./SingleProject";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { fadeIn } from "../../framerMotion/variants";
 
 const projects = [
@@ -58,19 +58,37 @@ const projects = [
 const ProjectsMain = () => {
   const controls = useAnimation();
   const [isPaused, setIsPaused] = useState(false);
+  const currentProgress = useRef(0);
+  const animationStartTime = useRef(Date.now());
 
-  const startScroll = () => {
+  const startScroll = (fromProgress = 0) => {
+    const remainingDistance = 50 - fromProgress * 50;
+    const remainingDuration = 15 * (remainingDistance / 50);
+
+    animationStartTime.current = Date.now();
+
     controls.start({
-      x: ["0%", "-50%"],
+      x: [`-${fromProgress * 50}%`, "-50%"],
       transition: {
         x: {
           repeat: Infinity,
           repeatType: "loop",
-          duration: 15,
+          duration: remainingDuration,
           ease: "linear",
         },
       },
     });
+  };
+
+  const pauseScroll = () => {
+    const elapsed = (Date.now() - animationStartTime.current) / 1000;
+    const cycleProgress = (elapsed % 15) / 15;
+    currentProgress.current = cycleProgress;
+    controls.stop();
+  };
+
+  const resumeScroll = () => {
+    startScroll(currentProgress.current);
   };
 
   useEffect(() => {
@@ -79,9 +97,9 @@ const ProjectsMain = () => {
 
   useEffect(() => {
     if (isPaused) {
-      controls.stop();
+      pauseScroll();
     } else {
-      startScroll();
+      resumeScroll();
     }
   }, [isPaused]);
 
@@ -99,12 +117,14 @@ const ProjectsMain = () => {
 
       <ProjectsText />
 
-      <div className="overflow-hidden mt-12">
+      <div className="overflow-x-hidden overflow-y-visible mt-8 py-6">
         <motion.div
           animate={controls}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="flex gap-10 min-w-max px-4"
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+          className="flex gap-20 min-w-max px-4"
         >
           {duplicatedProjects.map((project, index) => (
             <div
@@ -126,5 +146,3 @@ const ProjectsMain = () => {
     </div>
   );
 };
-
-export default ProjectsMain;

@@ -15,7 +15,7 @@ const SingleProject = ({ name, year, image, link, githubLink }) => {
           alt={name}
           className="w-full h-full object-cover brightness-75 group-hover:brightness-100 transition-all duration-500"
         />
-        <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
+        <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/70 to-transparent text-white">
           <h2 className="text-orange font-bold text-xl">{name}</h2>
           <p className="text-sm font-light">{year}</p>
           <ProjectLinks viewLink={link} githubLink={githubLink} />
