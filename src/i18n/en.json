@@ -1,13 +1,14 @@
 {
   "contactMe": "Contact Me",
   "hero": {
-    "subtitle": "Front-End Web Developer",
+    "subtitle": "Full-Stack Web Developer",
     "title": "Cristian Ortiz",
     "description": "A Passionate Web Developer with 1 year of experience."
   },
   "about": {
     "title": "About Me",
-    "description": "I'm Cristian, a web developer passionate about building modern, dynamic, and user-focused applications. I have a solid background in computer science and hands-on experience in frontend development. I specialize in React, Next.js, HTML, CSS, JavaScript, Tailwind CSS, and TypeScript. I enjoy bringing ideas to life through clean, efficient, and responsive interfaces. I'm always looking to learn more and apply best practices that make development smoother for both users and fellow developers.",
+    "description": "I'm Cristian, a passionate Full-Stack Web Developer with a strong foundation in computer science and hands-on experience in both frontend and backend development. I specialize in building modern, dynamic, and responsive applications using React, Next.js, JavaScript, TypeScript, Tailwind CSS, and Node.js with Express, PostgreSQL, and Prisma. I love turning ideas into clean, efficient solutions that enhance the user experience and improve development workflows. I'm constantly learning and focused on writing scalable, maintainable code.",
+
     "button": "My Projects"
   },
   "experience": {
@@ -34,6 +35,18 @@
           "🛠️ Guide projects using Next.js, Prisma, and DBeaver"
         ]
       },
+      {
+        "job": "Point of Sale (POS) Leader",
+        "company": "Oppo",
+        "date": "2023 - 2023",
+        "responsibilities": [
+          "📈 Increase brand visibility",
+          "🤝 Enhance customer experience",
+          "🏆 Recognized for outstanding performance",
+          "📊 Develop and execute sales strategies"
+        ]
+      },
+
       {
         "job": "Experience Specialist",
         "company": "Motorola Solutions",

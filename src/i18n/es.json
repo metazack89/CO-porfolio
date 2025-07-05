@@ -1,14 +1,13 @@
 {
   "contactMe": "Contáctame",
   "hero": {
-    "subtitle": "Desarrollador Web Front-End",
+    "subtitle": "Desarrollador Web Full Stack",
     "title": "Cristian Ortiz",
     "description": "Un desarrollador web apasionado con 1 año de experiencia."
   },
   "about": {
     "title": "Sobre mí",
-    "description": "Soy Cristian, un desarrollador web apasionado por construir aplicaciones modernas, dinámicas y centradas en el usuario. Tengo una sólida formación en ciencias de la computación y experiencia práctica en desarrollo frontend.\nMe especializo en React, Next.js, HTML, CSS, JavaScript, Tailwind CSS y TypeScript.\nDisfruto dando vida a las ideas a través de interfaces limpias, eficientes y responsivas.\nSiempre estoy en busca de aprender más y aplicar las mejores prácticas que faciliten el desarrollo tanto para los usuarios como para otros desarrolladores.",
-    "button": "Mis Proyectos"
+    "description": "Soy Cristian, un apasionado Desarrollador Web Full Stack con una sólida formación en ciencias de la computación y experiencia práctica tanto en desarrollo frontend como backend.\nMe especializo en construir aplicaciones modernas, dinámicas y responsivas utilizando React, Next.js, JavaScript, TypeScript, Tailwind CSS, y Node.js con Express, PostgreSQL y Prisma.\nMe encanta transformar ideas en soluciones limpias y eficientes que mejoren la experiencia del usuario y optimicen los flujos de trabajo de desarrollo.\nEstoy en constante aprendizaje y enfocado en escribir código escalable y mantenible"
   },
   "experience": {
     "title": "Experiencia",
@@ -32,6 +31,17 @@
           "💡 Explicar y facilitar conceptos de desarrollo web con herramientas modernas",
           "📝 Apoyar a estudiantes con tareas y evaluar su progreso semanal",
           "🛠️ Guiar proyectos con Next.js, Prisma y DBeaver"
+        ]
+      },
+      {
+        "job": "Líder de Punto de Venta (POS)",
+        "company": "Oppo",
+        "date": "2023 - 2023",
+        "responsibilities": [
+          "📈 Aumentar la visibilidad de la marca",
+          "🤝 Mejorar la experiencia del cliente",
+          "🏆 Reconocimiento por desempeño sobresaliente",
+          "📊 Desarrollar y ejecutar estrategias de ventas"
         ]
       },
       {

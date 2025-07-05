@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import { LuArrowDownRight } from "react-icons/lu";
-import { useTranslation } from "react-i18next"; // Asegúrate de tener esto importado
+import { useTranslation } from "react-i18next"; 
 
 const NavbarBtn = () => {
   const { t } = useTranslation(); // Hook de traducción
