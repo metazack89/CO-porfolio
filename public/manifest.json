@@ -1,21 +1,16 @@
 {
   "name": "Cristian Ortiz",
   "short_name": "Portfolio",
-  "description": "I am a Developer with knowledge in JavaScript, CSS, and React. I enjoy experimenting and bringing simple things to life, as well as evolving more advanced processes.",
-  "start_url": "/",
+  "description": "Web developer with experience in frontend (JavaScript, React, CSS, responsive design) and backend using Node.js. Skilled with Express, PostgreSQL, Prisma, Docker, and JWT. I enjoy turning simple ideas into functional and scalable solutions.",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#000",
   "theme_color": "#000",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "192x192",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/favicon.ico",
-      "sizes": "512x512",
-      "type": "image/x-icon"
+      "src": "./favicon.png",
+      "sizes": "50x50",
+      "type": "image/png"
     }
   ]
 }
