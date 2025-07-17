@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const FloatingButton = () => {
   const { t, i18n } = useTranslation();
 
-  const cvLink = i18n.language === "es" ? "/cv-Sp.pdf" : "/cv-En.pdf";
+  const cvLink = i18n.language === "es" ? "/cv-Spa.pdf" : "/cv-Eng.pdf";
 
   return (
     <a
