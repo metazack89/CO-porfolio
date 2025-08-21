@@ -1,57 +1,57 @@
-import ProjectsText from "./ProjectsText";
-import SingleProject from "./SingleProject";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
-import { fadeIn } from "../../framerMotion/variants";
+import ProjectsText from './ProjectsText';
+import SingleProject from './SingleProject';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
+import { fadeIn } from '../../framerMotion/variants';
 
 const projects = [
   {
-    name: "Fortune Cookie",
-    year: "March2025",
-    align: "right",
-    image: "/website-img-1.jpg",
-    link: "https://gallet.netlify.app/",
-    githubLink: "https://github.com/metazack89/Galleta-jendercris",
+    name: 'Fortune Cookie',
+    year: 'March2025',
+    align: 'right',
+    image: '/website-img-1.jpg',
+    link: 'https://gallet.netlify.app/',
+    githubLink: 'https://github.com/metazack89/Galleta-jendercris',
   },
   {
-    name: "Develop School",
-    year: "March2025",
-    align: "left",
-    image: "/website-img-2.webp",
-    link: "https://developschools.netlify.app/",
-    githubLink: "https://github.com/metazack89/CRUD2.0",
+    name: 'Develop School',
+    year: 'March2025',
+    align: 'left',
+    image: '/website-img-2.webp',
+    link: 'https://developschools.netlify.app/',
+    githubLink: 'https://github.com/metazack89/CRUD2.0',
   },
   {
-    name: "Mega Poke App",
-    year: "April2025",
-    align: "right",
-    image: "/website-img-3.jpg",
-    link: "https://megaa.netlify.app/",
-    githubLink: "https://github.com/metazack89/POKEAPP",
+    name: 'Mega Poke App',
+    year: 'April2025',
+    align: 'right',
+    image: '/website-img-3.jpg',
+    link: 'https://megaa.netlify.app/',
+    githubLink: 'https://github.com/metazack89/POKEAPP',
   },
   {
-    name: "PWA Rick and Morty",
-    year: "March2025",
-    align: "left",
-    image: "/website-img-4.jpg",
-    link: "https://rymap.netlify.app/",
-    githubLink: "https://github.com/metazack89/RickandMorty",
+    name: 'PWA Rick and Morty',
+    year: 'March2025',
+    align: 'left',
+    image: '/website-img-4.jpg',
+    link: 'https://rymap.netlify.app/',
+    githubLink: 'https://github.com/metazack89/RickandMorty',
   },
   {
-    name: "AirBnB",
-    year: "January2025",
-    align: "left",
-    image: "/airbnb.jpg",
-    link: "https://cobnb.netlify.app/",
-    githubLink: "https://github.com/metazack89/airbnb",
+    name: 'Derali.AI',
+    year: 'January2025',
+    align: 'left',
+    image: '/Derali.AI.jpg',
+    link: 'https://derali.netlify.app/',
+    githubLink: 'https://github.com/metazack89/derali.ai',
   },
   {
-    name: "Chrisecom",
-    year: "April2025",
-    align: "left",
-    image: "/chriscom.jpg",
-    link: "https://acommer.netlify.app/",
-    githubLink: "https://github.com/metazack89/ecomm",
+    name: 'Chrisecom',
+    year: 'April2025',
+    align: 'left',
+    image: '/chriscom.jpg',
+    link: 'https://acommer.netlify.app/',
+    githubLink: 'https://github.com/metazack89/ecomm',
   },
 ];
 
@@ -68,13 +68,13 @@ const ProjectsMain = () => {
     animationStartTime.current = Date.now();
 
     controls.start({
-      x: [`-${fromProgress * 50}%`, "-50%"],
+      x: [`-${fromProgress * 50}%`, '-50%'],
       transition: {
         x: {
           repeat: Infinity,
-          repeatType: "loop",
+          repeatType: 'loop',
           duration: remainingDuration,
-          ease: "linear",
+          ease: 'linear',
         },
       },
     });
@@ -108,7 +108,7 @@ const ProjectsMain = () => {
   return (
     <div id="projects" className="max-w-[1200px] mx-auto px-6">
       <motion.div
-        variants={fadeIn("top", 0)}
+        variants={fadeIn('top', 0)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
