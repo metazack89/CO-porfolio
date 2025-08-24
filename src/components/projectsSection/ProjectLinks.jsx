@@ -1,4 +1,5 @@
-import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import { BsFillArrowUpRightCircleFill } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 
 const ProjectLinks = ({ viewLink, githubLink }) => {
   return (
@@ -22,6 +23,11 @@ const ProjectLinks = ({ viewLink, githubLink }) => {
       </a>
     </div>
   );
+};
+
+ProjectLinks.propTypes = {
+  viewLink: PropTypes.string.isRequired,
+  githubLink: PropTypes.string.isRequired,
 };
 
 export default ProjectLinks;

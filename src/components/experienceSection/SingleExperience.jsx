@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../framerMotion/variants';
+import PropTypes from 'prop-types';
 
 const SingleExperience = ({ experience }) => {
   return (
     <motion.div
-      variants={fadeIn("right", 0)}
+      variants={fadeIn('right', 0)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.7 }}
@@ -20,6 +21,14 @@ const SingleExperience = ({ experience }) => {
       </ul>
     </motion.div>
   );
+};
+SingleExperience.propTypes = {
+  experience: PropTypes.shape({
+    job: PropTypes.string.isRequired,
+    company: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    responsibilities: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 export default SingleExperience;

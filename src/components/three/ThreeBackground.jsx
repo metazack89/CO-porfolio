@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import * as THREE from "three";
+import { useEffect, useRef } from 'react';
+import * as THREE from 'three';
 
 const ThreeBackground = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
+    const mountNode = mountRef.current;
     // Escena, cámara y renderer
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -15,7 +16,7 @@ const ThreeBackground = () => {
     );
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
+    mountNode.appendChild(renderer.domElement);
 
     // Partículas de fondo
     const particlesGeometry = new THREE.BufferGeometry();
@@ -24,18 +25,12 @@ const ThreeBackground = () => {
     for (let i = 0; i < particlesCount * 3; i++) {
       positionArray[i] = (Math.random() - 0.5) * 10;
     }
-    particlesGeometry.setAttribute(
-      "position",
-      new THREE.BufferAttribute(positionArray, 3)
-    );
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positionArray, 3));
     const particlesMaterial = new THREE.PointsMaterial({
       size: 0.02,
       color: 0xffffff,
     });
-    const particlesMesh = new THREE.Points(
-      particlesGeometry,
-      particlesMaterial
-    );
+    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
     scene.add(particlesMesh);
 
     // Estrellas fugaces
@@ -70,11 +65,7 @@ const ThreeBackground = () => {
         star.mesh.position.y -= star.speed / 2;
         if (star.mesh.position.x < -5 || star.mesh.position.y < -2) {
           // Reset posición para seguir reapareciendo
-          star.mesh.position.set(
-            Math.random() * 6 - 3,
-            Math.random() * 3 + 2,
-            Math.random() * -5
-          );
+          star.mesh.position.set(Math.random() * 6 - 3, Math.random() * 3 + 2, Math.random() * -5);
         }
       });
 
@@ -88,12 +79,13 @@ const ThreeBackground = () => {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
-    window.addEventListener("resize", handleResize);
-
+    window.addEventListener('resize', handleResize);
     // Limpieza
     return () => {
-      mountRef.current.removeChild(renderer.domElement);
-      window.removeEventListener("resize", handleResize);
+      if (mountNode && renderer.domElement.parentNode === mountNode) {
+        mountNode.removeChild(renderer.domElement);
+      }
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -101,13 +93,13 @@ const ThreeBackground = () => {
     <div
       ref={mountRef}
       style={{
-        position: "fixed",
+        position: 'fixed',
         top: 0,
         left: 0,
         zIndex: -1,
-        width: "100%",
-        height: "100%",
-        overflow: "hidden",
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
       }}
     />
   );

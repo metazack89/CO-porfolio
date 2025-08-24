@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
-import ProjectLinks from "./ProjectLinks";
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+import ProjectLinks from './ProjectLinks';
 
 const SingleProject = ({ name, year, image, link, githubLink }) => {
   return (
     <div className="inline-block w-[300px] md:w-[400px] shrink-0">
       <motion.div
         whileHover={{ scale: 1.05 }}
-        transition={{ type: "spring", stiffness: 300 }}
+        transition={{ type: 'spring', stiffness: 300 }}
         className="relative max-w-[300px] md:max-w-[400px] h-[220px] rounded-xl overflow-hidden border border-white group cursor-pointer"
       >
         <img
@@ -23,6 +23,13 @@ const SingleProject = ({ name, year, image, link, githubLink }) => {
       </motion.div>
     </div>
   );
+};
+SingleProject.propTypes = {
+  name: PropTypes.string.isRequired,
+  year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  image: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  githubLink: PropTypes.string,
 };
 
 export default SingleProject;

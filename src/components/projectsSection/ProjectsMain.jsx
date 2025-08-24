@@ -1,10 +1,26 @@
 import ProjectsText from './ProjectsText';
 import SingleProject from './SingleProject';
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { fadeIn } from '../../framerMotion/variants';
 
 const projects = [
+  {
+    name: 'Gemini.AI',
+    year: 'October2024',
+    align: 'left',
+    image: '/Gemini-AI.jpg',
+    link: 'https://gemi-ai.netlify.app/',
+    githubLink: 'https://github.com/metazack89/Gemini.AI',
+  },
+  {
+    name: 'Derali.AI',
+    year: 'January2025',
+    align: 'left',
+    image: '/Derali.AI.jpg',
+    link: 'https://derali.netlify.app/',
+    githubLink: 'https://github.com/metazack89/derali.ai',
+  },
   {
     name: 'Fortune Cookie',
     year: 'March2025',
@@ -37,14 +53,7 @@ const projects = [
     link: 'https://rymap.netlify.app/',
     githubLink: 'https://github.com/metazack89/RickandMorty',
   },
-  {
-    name: 'Derali.AI',
-    year: 'January2025',
-    align: 'left',
-    image: '/Derali.AI.jpg',
-    link: 'https://derali.netlify.app/',
-    githubLink: 'https://github.com/metazack89/derali.ai',
-  },
+
   {
     name: 'Chrisecom',
     year: 'April2025',
@@ -61,39 +70,42 @@ const ProjectsMain = () => {
   const currentProgress = useRef(0);
   const animationStartTime = useRef(Date.now());
 
-  const startScroll = (fromProgress = 0) => {
-    const remainingDistance = 50 - fromProgress * 50;
-    const remainingDuration = 15 * (remainingDistance / 50);
+  const startScroll = useCallback(
+    (fromProgress = 0) => {
+      const remainingDistance = 50 - fromProgress * 50;
+      const remainingDuration = 15 * (remainingDistance / 50);
 
-    animationStartTime.current = Date.now();
+      animationStartTime.current = Date.now();
 
-    controls.start({
-      x: [`-${fromProgress * 50}%`, '-50%'],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: 'loop',
-          duration: remainingDuration,
-          ease: 'linear',
+      controls.start({
+        x: [`-${fromProgress * 50}%`, '-50%'],
+        transition: {
+          x: {
+            repeat: Infinity,
+            repeatType: 'loop',
+            duration: remainingDuration,
+            ease: 'linear',
+          },
         },
-      },
-    });
-  };
+      });
+    },
+    [controls]
+  );
 
-  const pauseScroll = () => {
+  const pauseScroll = useCallback(() => {
     const elapsed = (Date.now() - animationStartTime.current) / 1000;
     const cycleProgress = (elapsed % 15) / 15;
     currentProgress.current = cycleProgress;
     controls.stop();
-  };
+  }, [controls]);
 
-  const resumeScroll = () => {
+  const resumeScroll = useCallback(() => {
     startScroll(currentProgress.current);
-  };
+  }, [startScroll]);
 
   useEffect(() => {
     startScroll();
-  }, []);
+  }, [startScroll]);
 
   useEffect(() => {
     if (isPaused) {
@@ -101,7 +113,7 @@ const ProjectsMain = () => {
     } else {
       resumeScroll();
     }
-  }, [isPaused]);
+  }, [isPaused, pauseScroll, resumeScroll]);
 
   const duplicatedProjects = [...projects, ...projects];
 
@@ -124,13 +136,10 @@ const ProjectsMain = () => {
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
-          className="flex gap-20 min-w-max px-4"
+          className="flex gap-28 min-w-max px-8"
         >
           {duplicatedProjects.map((project, index) => (
-            <div
-              key={index}
-              className="shrink-0 max-w-[320px] transition-transform hover:scale-[1.02]"
-            >
+            <div key={index} className="shrink-0 w-[320px] transition-transform hover:scale-[1.02]">
               <SingleProject
                 name={project.name}
                 year={project.year}
