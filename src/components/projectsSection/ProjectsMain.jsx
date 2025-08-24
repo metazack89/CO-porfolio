@@ -10,8 +10,8 @@ const projects = [
     year: 'October2024',
     align: 'left',
     image: '/Gemini-AI.jpg',
-    link: 'https://gemi-ai.netlify.app/',
-    githubLink: 'https://github.com/metazack89/Gemini.AI',
+    link: 'https://gemin-ia.netlify.app/',
+    githubLink: 'https://github.com/metazack89/Gemin.IA',
   },
   {
     name: 'Derali.AI',
