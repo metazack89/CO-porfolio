@@ -9,7 +9,7 @@ const projects = [
     name: 'AIdly',
     year: 'September2025',
     align: 'left',
-    image: '/AIdly.jpg',
+    image: '/aidly.jpg',
     link: 'https://rescate-digital.emergent.host/',
     githubLink: 'https://github.com/metazack89/AIdly',
   },
