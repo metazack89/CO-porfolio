@@ -6,6 +6,14 @@ import { fadeIn } from '../../framerMotion/variants';
 
 const projects = [
   {
+    name: 'AIdly',
+    year: 'September2025',
+    align: 'left',
+    image: '/AIdly.jpg',
+    link: 'https://rescate-digital.emergent.host/',
+    githubLink: 'https://github.com/metazack89/AIdly',
+  },
+  {
     name: 'Gemini.AI',
     year: 'October2024',
     align: 'left',
