@@ -6,6 +6,14 @@ import { fadeIn } from '../../framerMotion/variants';
 
 const projects = [
   {
+    name: 'Memoria Familia',
+    year: 'September2025',
+    align: 'left',
+    image: '/memoriaviva.jpg',
+    link: 'https://recuerdos-familia.emergent.host/',
+    githubLink: 'https://github.com/metazack89/Memoria-familia',
+  },
+  {
     name: 'AIdly',
     year: 'September2025',
     align: 'left',
