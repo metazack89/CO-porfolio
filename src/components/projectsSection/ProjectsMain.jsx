@@ -54,6 +54,14 @@ const projects = [
     githubLink: 'https://github.com/metazack89/CRUD2.0',
   },
   {
+    name: 'Netflix Clone',
+    year: 'April2025',
+    align: 'left',
+    image: '/Netflixclone.jpg',
+    link: 'cinetv-d4fd2.web.app/',
+    githubLink: 'https://github.com/metazack89/cineapp',
+  },
+  {
     name: 'Mega Poke App',
     year: 'April2025',
     align: 'right',
