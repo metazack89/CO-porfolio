@@ -1,4 +1,4 @@
-import { PiHexagonThin } from "react-icons/pi";
+import { PiHexagonThin } from 'react-icons/pi';
 
 const HeroImage = () => {
   return (

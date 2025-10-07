@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
-import { PiHexagonThin } from "react-icons/pi";
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../framerMotion/variants';
+import { PiHexagonThin } from 'react-icons/pi';
 
 const HeroPic = () => {
   return (
     <motion.div
-      variants={fadeIn("left", 0.2)}
+      variants={fadeIn('left', 0.2)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0 }}
