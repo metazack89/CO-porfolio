@@ -7,7 +7,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "description": "Soy Cristian, un apasionado Desarrollador Web Full Stack con una sólida formación en ciencias de la computación y experiencia práctica tanto en desarrollo frontend como backend.\nMe especializo en construir aplicaciones modernas, dinámicas y responsivas utilizando React, Next.js, JavaScript, TypeScript, Tailwind CSS, y Node.js con Express, PostgreSQL y Prisma.\nMe encanta transformar ideas en soluciones limpias y eficientes que mejoren la experiencia del usuario y optimicen los flujos de trabajo de desarrollo.\nEstoy en constante aprendizaje y enfocado en escribir código escalable y mantenible"
+    "description": "Soy Cristian, un apasionado Desarrollador Web Full Stack con una sólida formación en ciencias de la computación y experiencia práctica tanto en desarrollo frontend como backend.\nTrabajo con un amplio ecosistema de tecnologías modernas como JavaScript, TypeScript, React, Next.js, Node.js, Express, PostgreSQL, MongoDB, Firebase y Prisma, junto con herramientas como Git, GitHub, Docker, AWS, Auth0, Web3Forms, Postman y Beekeeper.\nTambién construyo interfaces dinámicas, atractivas y responsivas utilizando HTML5, CSS3, Tailwind CSS, Three.js y Vite.\nMe encanta transformar ideas en soluciones limpias, seguras y eficientes que mejoren la experiencia del usuario y optimicen los flujos de trabajo de desarrollo.\nEstoy en constante aprendizaje y enfocado en escribir código escalable, mantenible y de alto rendimiento."
   },
   "experience": {
     "title": "Experiencia",

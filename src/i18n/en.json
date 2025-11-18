@@ -7,7 +7,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I'm Cristian, a passionate Full-Stack Web Developer with a strong foundation in computer science and hands-on experience in both frontend and backend development. I specialize in building modern, dynamic, and responsive applications using React, Next.js, JavaScript, TypeScript, Tailwind CSS, and Node.js with Express, PostgreSQL, and Prisma. I love turning ideas into clean, efficient solutions that enhance the user experience and improve development workflows. I'm constantly learning and focused on writing scalable, maintainable code.",
+    "description": "I’m Cristian, a passionate Full Stack Web Developer with a solid background in computer science and hands-on experience in both frontend and backend development.\nI work with a wide ecosystem of modern technologies such as JavaScript, TypeScript, React, Next.js, Node.js, Express, PostgreSQL, MongoDB, Firebase and Prisma, along with tools like Git, GitHub, Docker, AWS, Auth0, Web3Forms, Postman and Beekeeper.\nI also build dynamic, responsive and visually appealing interfaces using HTML5, CSS3, Tailwind CSS, Three.js and Vite.\nI love turning ideas into clean, secure and efficient solutions that enhance user experience and streamline development workflows.\nI’m constantly learning and focused on writing scalable, maintainable and high-performance code.",
 
     "button": "My Projects"
   },
