@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import * as THREE from "three";
+import { useEffect, useRef } from 'react';
+import * as THREE from 'three';
 
 const MouseTracker = () => {
   const canvasRef = useRef(null);
@@ -7,20 +7,22 @@ const MouseTracker = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      1,
-      1000
+      75, // FOV
+      window.innerWidth / window.innerHeight, // Aspect ratio
+      0.1, // Near plane
+      1000 // Far plane
     );
     camera.position.z = 5;
 
+    // Configura el renderizador
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
 
-    // Crear partículas tipo "nebulosa"
+    // Crear partículas
     const particleCount = 1000;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
@@ -29,7 +31,7 @@ const MouseTracker = () => {
       positions[i] = (Math.random() - 0.5) * 10;
     }
 
-    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
     const material = new THREE.PointsMaterial({
       color: 0x00ffff,
@@ -43,19 +45,21 @@ const MouseTracker = () => {
     const particles = new THREE.Points(geometry, material);
     scene.add(particles);
 
+    // Manejo del movimiento del mouse
     const onMouseMove = (e) => {
       mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
       mouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
     };
 
-    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener('mousemove', onMouseMove);
 
+    // Función de animación
     const animate = () => {
       requestAnimationFrame(animate);
 
+      // Mueve las partículas según el mouse
       particles.rotation.y += 0.001;
       particles.rotation.x += 0.0005;
-
       particles.position.x = mouse.current.x * 0.5;
       particles.position.y = mouse.current.y * 0.5;
 
@@ -64,25 +68,23 @@ const MouseTracker = () => {
 
     animate();
 
+    // Manejo de cambio de tamaño
     const handleResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('resize', handleResize);
       renderer.dispose();
     };
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"
-    />
+    <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none" />
   );
 };
 

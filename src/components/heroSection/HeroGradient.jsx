@@ -1,10 +1,17 @@
 const HeroGradient = () => {
   return (
-    <div>
-      <div className="  shadow-cyanMediumShadow absolute top-0 right-[400px] -z-10 animate-pulse"></div>
-      <div className="  shadow-cyanMediumShadow absolute top-[5%] left-0 -z-10 opacity-50"></div>
-      <div className="  shadow-orangeMediumShadow absolute top-0 right-0 -z-10 animate-pulse"></div>
-      <div className="  shadow-orangeMediumShadow absolute top-[10%] left-0 -z-10 opacity-50 "></div>
+    <div className="pointer-events-none select-none">
+      {/* Cyan superior derecha */}
+      <div className="shadow-cyanMediumShadow absolute top-[-50px] right-[0px] -z-20 animate-pulse" />
+
+      {/* Cyan suave lateral derecho */}
+      <div className="shadow-cyanMediumShadow absolute top-[20%] right-[200px] -z-20 opacity-40" />
+
+      {/* Orange superior derecha */}
+      <div className="shadow-orangeMediumShadow absolute top-[10%] right-[-100px] -z-20 animate-pulse" />
+
+      {/* Orange suave inferior */}
+      <div className="shadow-orangeMediumShadow absolute bottom-[0] left-[40%] -z-20 opacity-40" />
     </div>
   );
 };

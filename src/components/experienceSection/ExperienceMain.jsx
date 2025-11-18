@@ -1,14 +1,14 @@
-import AllExperiences from "./AllExperiences";
-import ExperienceText from "./ExperienceText";
-import ExperienceTop from "./ExperienceTop";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import AllExperiences from './AllExperiences';
+import ExperienceText from './ExperienceText';
+import ExperienceTop from './ExperienceTop';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../framerMotion/variants';
 
 const ExperienceMain = () => {
   return (
-    <div id="experience" className="max-w-[1500px] mx-auto px-4">
+    <div id="experience" className="max-w-[2500px] mx-auto px-8 lg:py-16 sm:py-8">
       <motion.div
-        variants={fadeIn("down", 0)}
+        variants={fadeIn('down', 0)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
@@ -16,7 +16,7 @@ const ExperienceMain = () => {
         <ExperienceText />
       </motion.div>
       <motion.div
-        variants={fadeIn("down", 0.5)}
+        variants={fadeIn('down', 0.5)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}

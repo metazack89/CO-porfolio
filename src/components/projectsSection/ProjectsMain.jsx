@@ -1,31 +1,39 @@
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import ProjectsText from './ProjectsText';
 import SingleProject from './SingleProject';
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useState, useRef, useCallback } from 'react';
 import { fadeIn } from '../../framerMotion/variants';
 
 const projects = [
   {
-    name: 'Memoria Familia',
+    name: 'Portfolio V2',
     year: 'September2025',
     align: 'left',
-    image: '/memoriaviva.jpg',
-    link: 'https://recuerdos-familia.emergent.host/',
-    githubLink: 'https://github.com/metazack89/Memoria-familia',
+    image: '/projects/Portfolio.jpg',
+    link: 'https://potfoliocristian.netlify.app/',
+    githubLink: 'https://github.com/metazack89/New-Portafolio',
   },
   {
-    name: 'AIdly',
-    year: 'September2025',
+    name: 'Lumicore',
+    year: 'October2025',
     align: 'left',
-    image: '/aidly.jpg',
-    link: 'https://rescate-digital.emergent.host/',
-    githubLink: 'https://github.com/metazack89/AIdly',
+    image: '/projects/Lumicore.jpg',
+    link: 'https://lumicore-tau.vercel.app/',
+    githubLink: 'https://github.com/metazack89/Lumicore',
+  },
+  {
+    name: 'Rent a Car',
+    year: 'November2025',
+    align: 'left',
+    image: '/projects/Rent_a_Car.jpg',
+    link: 'https://rent-car-orpin.vercel.app/',
+    githubLink: 'https://github.com/metazack89/Rent_a_Car',
   },
   {
     name: 'Gemini.AI',
     year: 'October2024',
     align: 'left',
-    image: '/Gemini-AI.jpg',
+    image: '/projects/Gemini-AI.jpg',
     link: 'https://gemin-ia.netlify.app/',
     githubLink: 'https://github.com/metazack89/Gemin.IA',
   },
@@ -33,7 +41,7 @@ const projects = [
     name: 'Derali.AI',
     year: 'January2025',
     align: 'left',
-    image: '/Derali.AI.jpg',
+    image: '/projects/Derali.AI.jpg',
     link: 'https://derali.netlify.app/',
     githubLink: 'https://github.com/metazack89/derali.ai',
   },
@@ -41,7 +49,7 @@ const projects = [
     name: 'Fortune Cookie',
     year: 'March2025',
     align: 'right',
-    image: '/website-img-1.jpg',
+    image: '/projects/fortune.jpg',
     link: 'https://gallet.netlify.app/',
     githubLink: 'https://github.com/metazack89/Galleta-jendercris',
   },
@@ -49,7 +57,7 @@ const projects = [
     name: 'Develop School',
     year: 'March2025',
     align: 'left',
-    image: '/website-img-2.webp',
+    image: '/projects/develop.webp',
     link: 'https://developschools.netlify.app/',
     githubLink: 'https://github.com/metazack89/CRUD2.0',
   },
@@ -57,15 +65,15 @@ const projects = [
     name: 'Netflix Clone',
     year: 'April2025',
     align: 'left',
-    image: '/Netflixclone.jpg',
-    link: 'cinetv-d4fd2.web.app/',
+    image: '/projects/Netflixclone.jpg',
+    link: 'https://cinetv-d4fd2.web.app/',
     githubLink: 'https://github.com/metazack89/cineapp',
   },
   {
     name: 'Mega Poke App',
     year: 'April2025',
     align: 'right',
-    image: '/website-img-3.jpg',
+    image: '/projects/pokeapp.jpg',
     link: 'https://megaa.netlify.app/',
     githubLink: 'https://github.com/metazack89/POKEAPP',
   },
@@ -73,16 +81,15 @@ const projects = [
     name: 'PWA Rick and Morty',
     year: 'March2025',
     align: 'left',
-    image: '/website-img-4.jpg',
+    image: '/projects/rickandmorty.jpg',
     link: 'https://rymap.netlify.app/',
     githubLink: 'https://github.com/metazack89/RickandMorty',
   },
-
   {
     name: 'Chrisecom',
     year: 'April2025',
     align: 'left',
-    image: '/chriscom.jpg',
+    image: '/projects/chriscom.jpg',
     link: 'https://acommer.netlify.app/',
     githubLink: 'https://github.com/metazack89/ecomm',
   },
@@ -90,88 +97,60 @@ const projects = [
 
 const ProjectsMain = () => {
   const controls = useAnimation();
-  const [isPaused, setIsPaused] = useState(false);
-  const currentProgress = useRef(0);
-  const animationStartTime = useRef(Date.now());
+  const [paused, setPaused] = useState(false);
 
-  const startScroll = useCallback(
-    (fromProgress = 0) => {
-      const remainingDistance = 50 - fromProgress * 50;
-      const remainingDuration = 15 * (remainingDistance / 50);
+  const duration = 25;
 
-      animationStartTime.current = Date.now();
+  const duplicatedProjects = [...projects, ...projects];
 
+  useEffect(() => {
+    if (paused) {
+      controls.stop();
+    } else {
       controls.start({
-        x: [`-${fromProgress * 50}%`, '-50%'],
+        x: ['0%', '-50%'],
         transition: {
           x: {
             repeat: Infinity,
             repeatType: 'loop',
-            duration: remainingDuration,
             ease: 'linear',
+            duration,
           },
         },
       });
-    },
-    [controls]
-  );
-
-  const pauseScroll = useCallback(() => {
-    const elapsed = (Date.now() - animationStartTime.current) / 1000;
-    const cycleProgress = (elapsed % 15) / 15;
-    currentProgress.current = cycleProgress;
-    controls.stop();
-  }, [controls]);
-
-  const resumeScroll = useCallback(() => {
-    startScroll(currentProgress.current);
-  }, [startScroll]);
-
-  useEffect(() => {
-    startScroll();
-  }, [startScroll]);
-
-  useEffect(() => {
-    if (isPaused) {
-      pauseScroll();
-    } else {
-      resumeScroll();
     }
-  }, [isPaused, pauseScroll, resumeScroll]);
-
-  const duplicatedProjects = [...projects, ...projects];
+  }, [paused, controls]);
 
   return (
-    <div id="projects" className="max-w-[1200px] mx-auto px-6">
+    <div id="projects" className="w-full px-0">
+      {/* animación de entrada */}
       <motion.div
         variants={fadeIn('top', 0)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
-        className="overflow-visible"
-      ></motion.div>
+      />
 
       <ProjectsText />
 
-      <div className="overflow-x-hidden overflow-y-visible mt-8 py-6">
+      {/* CONTENEDOR DEL CARRUSEL */}
+      <div className="overflow-x-hidden mt-10 py-10 relative">
+        {/* GRADIENTES LATERALES TIPO MARQUEE */}
+        <div className="absolute inset-y-0 left-0 w-24 pointer-events-none bg-gradient-to-r from-[#0B0B0F] to-transparent z-20"></div>
+        <div className="absolute inset-y-0 right-0 w-24 pointer-events-none bg-gradient-to-l from-[#0B0B0F] to-transparent z-20"></div>
+
+        {/* CARRUSEL ANIMADO */}
         <motion.div
           animate={controls}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={() => setIsPaused(true)}
-          onTouchEnd={() => setIsPaused(false)}
-          className="flex gap-28 min-w-max px-8"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onTouchStart={() => setPaused(true)}
+          onTouchEnd={() => setPaused(false)}
+          className="flex gap-28 min-w-max px-8 marquee-smooth"
         >
           {duplicatedProjects.map((project, index) => (
-            <div key={index} className="shrink-0 w-[320px] transition-transform hover:scale-[1.02]">
-              <SingleProject
-                name={project.name}
-                year={project.year}
-                align={project.align}
-                image={project.image}
-                link={project.link}
-                githubLink={project.githubLink}
-              />
+            <div key={index} className="shrink-0 w-[320px] transition-transform hover:scale-[1.03]">
+              <SingleProject {...project} />
             </div>
           ))}
         </motion.div>
@@ -179,4 +158,5 @@ const ProjectsMain = () => {
     </div>
   );
 };
+
 export default ProjectsMain;
