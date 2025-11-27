@@ -10,7 +10,7 @@ const ExperienceTopLeft = () => {
         {t('experienceTopLeft.since')}
       </p>
       <div className="flex justify-center items-center gap-4">
-        <ExperienceInfo number="2" text={t('experienceTopLeft.year')} />
+        <ExperienceInfo number="1" text={t('experienceTopLeft.year')} />
         <p className="font-bold text-6xl text-lightBrown">-</p>
         <ExperienceInfo number="8" text={t('experienceTopLeft.websites')} />
       </div>
