@@ -13,7 +13,7 @@ const FloatingButton = () => {
       download
       target="_blank"
       rel="noopener noreferrer"
-      title={t('cv')} // Tooltip aquí 👇
+      title={t('cv')} // Tooltip
       className="fixed top-1/2 right-6 -translate-y-1/2 z-50 flex items-center justify-center w-12 h-12 rounded-full border border-orange/60 bg-gradient-to-r from-orange/60 to-darkbrown/60 backdrop-blur-sm shadow-lg hover:scale-60 hover:border-light hover:shadow-orangeMediumShadow transition-all duration-300 cursor-pointer"
     >
       <MdOutlineSimCardDownload className="text-xl  text-white hover:text-lightOrange transition-all duration-300" />
